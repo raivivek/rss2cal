@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>rss2cal</title>
+    <meta name="keywords" content="rss, calendar, ical, ics">
+    <meta name="author" content="Vivek Rai">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Convert RSS event feed urls to ics (calendar) files for import">
+    <meta name="google" content="nositelinkssearchbox" />
+    <style type="text/css">
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, San Francisco, Helvetica Neue,
+  Helvetica, Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  font-size: 20px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns:
+    1fr
+    min(85ch, 100%)
+    1fr;
+}
+
+.wrapper > * {
+  grid-column: 2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.row {
+  margin: 2% 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: max(2vw, 16px);
+}
+
+.query {
+  margin-top: 15%;
+  flex-flow: row wrap;
+  line-height: 0;
+}
+
+.query > * {
+  font-size: 1.1em;
+}
+
+.row p {
+  letter-spacing: 1px;
+  flex-basis: 0;
+  padding-right: 1ch;
+}
+
+span {
+  display: block;
+  flex-basis: 0;
+  padding-right: 1ch;
+}
+
+input {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: .9rem;
+  display: inline-block;
+  border: none;
+  text-align: left;
+  margin-bottom: -5px;
+  font-size: 1.1em;
+  width: 100%;
+  text-align: center;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+button {
+    margin-top: 1em;
+    font-size: 18px;
+}
+
+.item {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tool {
+  font-family: 'Courier New', Courier, monospace;
+  color: blue;
+}
+
+textarea:focus,
+input:focus,
+input[type]:focus,
+.uneditable-input:focus {
+  outline: 0 none;
+}
+
+.hidden {
+  display: none;
+}
+
+.sidebar {
+  background: #f0f0f0;
+  padding: 1em 1em;
+  min-height: 100%;
+}
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+  font-size: .9rem;
+}
+
+.send-note {
+  font-size: .75rem;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <script>
+
+    </script>
+  </head>
+  <body class="wrapper">
+    <div class="container">
+        <form action="/download" method="post">
+            <div class="row query">
+                <label for="url"></label>
+                <input name="url" class="input" type="text" autocomplete=off placeholder="Paste URL" required>
+            </div>
+            <div class="row">
+                <button class="download-btn" type="submit">Download</button>
+            </div>
+        </form>
+        <div class="footer send-note">
+          <a href="">contact me.</a> </span>
+        </div>
+    </div>
+  </body>
+</html>
